@@ -51,3 +51,35 @@ code {
   background: red;
   border-radius: 10px;
 }
+
+.watch-btn-v {
+  margin: 0.5vw;
+  padding: 0.8vh;
+  font-size: 14px;
+  box-shadow: 0 0 2px #ff073a, 0 0 2px #ff073a, 0 0 2px #ff073a, 0 0 2px #ff073a;
+}
+
+.watch-btn-trailer {
+  margin: 0.5vw;
+  padding: 0.8vh;
+  font-size: 14px;
+  box-shadow: 0 0 2px #adff2f, 0 0 2px #adff2f, 0 0 2px #adff2f, 0 0 2px #adff2f;
+}
+
+.filter {
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  border: none;
+  border-radius: 10%;
+  color: #fff;
+  margin: 0.3vw;
+  padding: 0.5vh;
+  font-size: 15px;
+}
+
+.filter:hover {
+  transform: scale(1.1);
+}
+
+.filter.true {
+  background-color: rgba(172, 255, 47, 0.479) !important;
+}

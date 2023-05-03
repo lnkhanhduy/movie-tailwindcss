@@ -1,4 +1,4 @@
-function Rate() {
+function Rating() {
   return (
     <div className="flex px-5 justify-between items-center w-[80%]">
       <p>2h - 49 min</p>
@@ -12,4 +12,4 @@ function Rate() {
   );
 }
 
-export default Rate;
+export default Rating;

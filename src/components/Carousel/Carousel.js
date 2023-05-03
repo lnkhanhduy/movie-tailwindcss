@@ -6,7 +6,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-function Carousel({ children, pagination, slidesPerView = 1, navigation = false, loop = false, autoplay = '' }) {
+function Carousel({
+  children,
+  pagination,
+  slidesPerView = 1,
+  navigation = false,
+  spaceBetween = 0,
+  loop = false,
+  autoplay = '',
+}) {
   return (
     <Swiper
       // install Swiper modules
@@ -14,6 +22,7 @@ function Carousel({ children, pagination, slidesPerView = 1, navigation = false,
       slidesPerView={slidesPerView}
       navigation={navigation}
       pagination={pagination}
+      spaceBetween={spaceBetween}
       loop={loop}
       autoplay={autoplay}
       className="mySwiper"

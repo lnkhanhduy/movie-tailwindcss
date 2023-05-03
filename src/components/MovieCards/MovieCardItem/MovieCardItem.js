@@ -1,22 +1,28 @@
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import images from '../../../assets/images';
 
-function MovieCardItem({ width = '60%' }) {
+function MovieCardItem({ width = '60%', data }) {
   return (
     <div className={`w-[${width}] m-auto`}>
-      <Link>
+      <Link to={data ? `/movie/${data.id}` : ''}>
         <img
-          src="https://images.unsplash.com/photo-1681491312804-f1725fd2da0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+          src={data && data.primaryImage ? data.primaryImage.url : images.no_image}
           alt="Movie"
           className="w-full h-[323px] object-cover"
         />
-        <div className="text-[#f5f5f5] text-[15px] font-[600] shadow-[0_0_15px_#000] text-center">
-          Scream 4
+        <div className="text-[#f5f5f5] text-[15px] font-[600] shadow-[0_0_15px_#000] text-center pt-2">
+          {data && data.titleText ? data.titleText.text : ''}
           <br />
-          2011
+          {data && data.releaseDate ? data.releaseDate.year : ''}
         </div>
       </Link>
     </div>
   );
 }
+MovieCardItem.propTypes = {
+  width: PropTypes.string,
+  data: PropTypes.object,
+};
 
 export default MovieCardItem;
